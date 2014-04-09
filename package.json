@@ -1,7 +1,7 @@
 {
-  "name": "example1",
+  "name": "DWD_Server",
   "version": "0.0.0",
-  "description": "DWS Example Day 1",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,10 +11,10 @@
     "type": "git",
     "url": "https://github.com/neilyadig/DWD_Server.git"
   },
-  "author": "neil",
+  "author": "Neil",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/neilyadig/dynamicweb-server/issues"
+    "url": "https://github.com/neilyadig/DWD_Server/issues"
   },
-  "homepage": "https://github.com/neilyadig/dynamicweb-server"
+  "homepage": "https://github.com/neilyadig/DWD_Server"
 }
