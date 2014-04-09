@@ -21,8 +21,8 @@ var server = http.createServer(function(req, res){
 
 	fs.readFile(filepath, function(err, data){
 		if(err){
-		console.log("Error finding file:" + err);
-		res.end("Error finding file.");
+			console.log("Error finding file:" + err);
+			res.end("Error finding file.");
 		}
 		res.end(data);
 	});
