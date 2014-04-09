@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/neilyadig/DWD_Server/issues"
   },
-  "homepage": "https://github.com/neilyadig/DWD_Server"
+  "homepage": "https://github.com/neilyadig/DWD_Server",
+  "dependencies": {
+    "express": "~4.0.0"
+  }
 }
