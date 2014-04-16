@@ -18,12 +18,12 @@ app.get('/page2', function(req, res){
 	res.render('page2');
 });
 
-var tutorialData = require('./tutorialData');
+var collectionData = require('./collectionData');
 
-app.get('/tutorials/:tutorialName', function(req, res){
-		var tutorialName = req.params.tutorialName;
-		var data = tutorialData[tutorialName];
-		res.render('tutorial', data);
+app.get('/collection/:objectName', function(req, res){
+		var objectName = req.params.objectName;
+		var data = collectionData[objectName];
+		res.render('collection', data);
 	});
 
 
