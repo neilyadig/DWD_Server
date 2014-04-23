@@ -1,45 +1,102 @@
-//Express + Handlebars
 var express = require('express');
-var expressHbs = require('express3-handlebars'); //Handlebars Module
-var handlebars = expressHbs.create({
-	defaultLayout: 'main'
-	//Main refers to my boilerplate/customized HTML in /layouts
-});
-var request = require('request');
-var app = express();
+var app 	= express();
+var moment  = require('moment');
+var bodyParser = require('body-parser');
+var expressHbs = require('express3-handlebars');
+var cookieParser = require('cookie-parser');
+var expressSession = require('express-session');
 
-app.engine('handlebars', handlebars.engine);
-app.set('view engine', 'handlebars'); //Set the view engine to handlebars
+
+app.use( bodyParser() );
+app.use( cookieParser() );
+app.use( expressSession({secret: 'thesecret'}) );
+
+app.engine('handlebars', expressHbs({defaultLayout:'main'}));
+app.set('view engine', 'handlebars');
+
+function checkLoggedIn(req, res, next){
+	console.log('inside checkLoggedIn');
+
+	if (req.session.username) {
+		res.locals.loggedInUsername = req.session.username;
+	}
+
+	next();
+}
+
+app.use( checkLoggedIn );
 
 app.get('/', function(req, res){
+
 	res.render('index');
 });
 
-app.get('/page2', function(req, res){
-	res.render('page2');
+app.get('/users/:user_id', function(req,res){
+	res.send("The user id is: " + req.params.user_id);
 });
 
-var collectionData = require('./collectionData');
+// people?id=5
+app.get('/people', function(req, res){
+	var id = req.query['id'];
+	console.log("The query params are: ",req.query);
 
-app.get('/collection/:objectName', function(req, res){ //Reference to data comes in dynamically thru /:objectName via the URL
-		var objectName = req.params.objectName;
-		var data = collectionData[objectName]; //refers to JavaScript object in collectionData.js
-		res.render('collection', data); //renders 'data' from collectionData.js
-	});
 
-app.get('/users/:user_id', function(req, res){
-	res.send("The user ID is: " + req.params.user_id);
+	res.render("people", {id: id});
+});
 
-})
-
-app.get('/login', function(req,res){
+app.get('/login', function(req, res){
 	res.render('login');
+});
 
-})
+function passwordIsValid(user, pass) {
+	if (user === 'itpclass' && pass === 'letmein') {
+		return true;
+	} else {
+		return false;
+	}
+}
 
-app.use('/public',
-	express.static('public'));
+app.post('/login', function(req, res){
+	console.log('body params:', req.body);
 
-var port = Number(process.env.PORT || 5000);
-console.log('Listening on port', port);
-app.listen(port);
+	var username = req.body['username'];
+	var password = req.body['password'];
+
+	if ( passwordIsValid(username, password) ) {
+		req.session.username = username;
+		res.redirect('/');
+	} else {
+		res.render('login', {failedLogin: true});
+	}
+});
+
+// // /set_session?myValue=abc
+// app.get('/set_session', function(req, res){
+//   if (!req.query.myValue){
+//     res.send("Please add a 'myValue' query to the URL like /set_session?myValue=abc");
+//   } else {
+//     req.session.myValue = req.query.myValue;
+//     res.send("Session's 'myValue' was set. Visit /see_session to view it.");
+//   }
+//
+// });
+//
+// app.get('/see_session', function(req, res){
+// 	res.send("session.myValue: " + req.session.myValue);
+// });
+
+app.get('/registry', function(req, res){
+	res.render('registry');
+});
+
+app.get('/stats', function(req, res){
+	res.render('stats');
+});
+
+app.get('/about', function(req, res){
+	res.render('about');
+});
+
+app.use('/public', express.static('public'));
+
+app.listen(process.env.PORT || 5000);

@@ -1,22 +1,49 @@
 <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>135is Registry</title>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    </head>
+		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/app.css">
 
+		<script src='/public/js/jquery.js'></script>
+		<script src='/public/js/bootstrap.js'></script>
 
-    <body>
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Home</a>
+				</div>
+				<div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li><a href="/registry">Registry</a></li>
+<!--               <li><a href="/set_session">Set Session (?myValue=X)</a></li> -->
+<!--               <li><a href="/users/5">users/:user_id</a></li> -->
+              <li><a href="/stats">Stats</a></li>
+              <li><a href="/about">About</a></li>
+          </ul>
+          <div class='nav navbar-text navbar-right'>
+            {{#if loggedInUsername}}
+              Logged in as <b>{{loggedInUsername}}</b>.
+              <a href='/logout' class='navbar-link'>Logout</a>
+            {{else}}
+              <a href='/login' class='navbar-link'>Login</a>
+            {{/if}}
+          </div>
+        </div>
+			</div>
+		</nav>
 
-    	{{{ body }}}
+	   	<div class='container'>
+       		{{{ body }}}
+       	</div>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    </body>
+       	<div id='footer'>
+       		<div class='container'>
+	       		<p class='text-muted'>footer</p>
+       		</div>
+       	</div>
+	</body>
 </html>
