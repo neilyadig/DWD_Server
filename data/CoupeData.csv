@@ -1,0 +1,587 @@
+buildNo,shortVIN,date,extColor,intColor,trans
+1,VM12956,2012-4-3,LeMans Blue,Blk/Blue,DCT
+2,VM13274,2012-4-4,Carbon Black,Blk/Blue,DCT
+3,VM13278,2012-4-5,Carbon Black,Blk/Blue,DCT
+4,VM13287,2012-4-6,Alpine White,Blk Sensatec,M6
+5,VM13289,2012-4-7,Carbon Black,Blk/Blue,DCT
+6,VM13292,2012-4-8,Jet Black,Black,DCT
+7,VM13298,2012-4-9,Carbon Black,Blk/Blue,DCT
+8,VM13299,2012-4-10,Alpine White,Blk/Blue,DCT
+9,VM13309,2012-4-11,LeMans Blue,Blk/Blue,M6
+10,VM13310,2012-4-12,LeMans Blue,Blk/Blue,M6
+11,VM13311,2012-4-13,LeMans Blue,Blk/Blue,M6
+12,VM13312,2012-4-14,Carbon Black,Blk/Blue,DCT
+13,VM13315,2012-4-15,Jet Black,Blk Sensatec,M6
+14,VM13320,2012-4-16,Alpine White,Blk/Blue,DCT
+15,VM13324,2012-4-17,LeMans Blue,Blk/Blue,M6
+16,VM13327,2012-4-18,Carbon Black,Coral,DCT
+17,VM13329,2012-4-19,Carbon Black,Blk/Blue,M6
+18,VM13330,2012-4-20,LeMans Blue,Blk/Blue,DCT
+19,VM13331,2012-4-21,Space Gray,Coral,DCT
+20,VM13332,2012-4-22,Mineral Gray,Blk/Blue,DCT
+21,VM13333,2012-4-23,Jet Black,Black,M6
+22,VM13334,2012-4-24,Alpine White,Black,M6
+23,VM13336,2012-4-25,Space Gray,Blk/Blue,M6
+24,VM13337,2012-4-26,Alpine White,Blk/Blue,DCT
+25,VM13340,2012-4-27,LeMans Blue,Blk/Blue,DCT
+26,VM13342,2012-4-28,Mineral Gray,Blk Sensatec,M6
+27,VM13346,2012-4-29,Jet Black,Black,DCT
+28,VM13348,2012-4-30,Titanium Silver,Blk Sensatec,DCT
+29,VM13351,2012-5-1,Vermillion Red,Coral,DCT
+30,VM13355,2012-5-2,Alpine White,Black,DCT
+31,VM13361,2012-5-3,Carbon Black,Black,DCT
+32,VM13367,2012-5-4,LeMans Blue,Blk/Blue,M6
+33,VM13368,2012-5-5,Carbon Black,Blk/Blue,M6
+34,VM13369,2012-5-6,Mineral Gray,Coral,DCT
+35,VM13370,2012-5-7,Carbon Black,Coral,DCT
+36,VM13374,2012-5-8,LeMans Blue,Blk/Blue,DCT
+37,VM13376,2012-5-9,Mineral Gray,Blk/Blue,M6
+38,VM13379,2012-5-10,Alpine White,Beige,M6
+39,VM13382,2012-5-11,Alpine White,Blk/Blue,DCT
+40,VM13388,2012-5-12,LeMans Blue,Blk/Blue,DCT
+41,VM13398,2012-5-13,LeMans Blue,Blk/Blue,DCT
+42,VM13404,2012-5-14,Carbon Black,Blk/Blue,DCT
+43,VM13408,2012-5-15,Carbon Black,Blk/Blue,DCT
+44,VM13409,2012-5-16,Alpine White,Coral,DCT
+45,VM13419,2012-5-17,Alpine White,Blk Sensatec,DCT
+46,VM13422,2012-5-18,Titanium Silver,Coral,DCT
+47,VM13423,2012-5-19,Space Gray,Coral,M6
+48,VM13426,2012-5-20,LeMans Blue,Blk/Blue,M6
+49,VM13427,2012-5-21,LeMans Blue,Oyster,M6
+50,VM13430,2012-5-22,LeMans Blue,Blk/Blue,M6
+51,VM13436,2012-5-23,Carbon Black,Black,DCT
+52,VM13440,2012-5-24,LeMans Blue,Blk/Blue,M6
+53,VM13442,2012-5-25,Carbon Black,Blk/Blue,DCT
+54,VM13443,2012-5-26,Alpine White,Blk/Blue,M6
+55,VM13447,2012-5-27,Carbon Black,Oyster,DCT
+56,VM13455,2012-5-28,Alpine White,Blk/Blue,M6
+57,VM13459,2012-5-29,Jet Black,Blk/Blue,DCT
+58,VM13462,2012-5-30,Carbon Black,Blk/Blue,DCT
+59,VM13463,2012-5-31,Carbon Black,Blk/Blue,DCT
+60,VM13464,2012-6-1,Carbon Black,Black,M6
+61,VM13465,2012-6-2,Carbon Black,Black,DCT
+62,VM13466,2012-6-3,Titanium Silver,Blk Sensatec,DCT
+63,VM13478,2012-6-4,Carbon Black,Blk/Blue,DCT
+64,VM13479,2012-6-5,Mineral Gray,Coral,M6
+65,VM13480,2012-6-6,Carbon Black,Blk Sensatec,M6
+66,VM13487,2012-6-7,Alpine White,Black,DCT
+67,VM13490,2012-6-8,LeMans Blue,Blk Sensatec,DCT
+68,VM13493,2012-6-9,Alpine White,Blk/Blue,DCT
+69,VM13494,2012-6-10,Vermillion Red,Black,DCT
+70,VM13495,2012-6-11,Jet Black,Blk/Blue,DCT
+71,VM13497,2012-6-12,Alpine White,Blk/Blue,M6
+72,VM13501,2012-6-13,Alpine White,Blk/Blue,DCT
+73,VM13502,2012-6-14,Alpine White,Coral,DCT
+74,VM13504,2012-6-15,Mineral Gray,Blk/Blue,DCT
+75,VM13507,2012-6-16,Jet Black,Blk Sensatec,DCT
+76,VM13511,2012-6-17,Jet Black,Black,DCT
+77,VM13512,2012-6-18,LeMans Blue,Blk/Blue,M6
+78,VM13515,2012-6-19,Carbon Black,Black,M6
+79,VM13516,2012-6-20,Alpine White,Blk Sensatec,DCT
+80,VM13521,2012-6-21,Mineral Gray,Blk Sensatec,DCT
+81,VM13526,2012-6-22,Alpine White,Coral,M6
+82,VM13527,2012-6-23,Carbon Black,Blk/Blue,DCT
+83,VM13529,2012-6-24,LeMans Blue,Blk/Blue,DCT
+84,VM13530,2012-6-25,LeMans Blue,Blk/Blue,DCT
+85,VM13532,2012-6-26,Deep Sea Blue,Blk/Blue,M6
+86,VM13535,2012-6-27,Alpine White,Black,DCT
+87,VM13539,2012-6-28,Deep Sea Blue,Terra,DCT
+88,VM13541,2012-6-29,LeMans Blue,Blk/Blue,M6
+89,VM13543,2012-6-30,LeMans Blue,Blk/Blue,M6
+90,VM13544,2012-7-1,Jet Black,Blk/Blue,DCT
+91,VM13545,2012-7-2,Alpine White,Taupe,M6
+92,VM13546,2012-7-3,LeMans Blue,Blk/Blue,DCT
+93,VM13547,2012-7-4,Space Gray,Black,M6
+94,VM13548,2012-7-5,Mineral Gray,Coral,DCT
+95,VM13549,2012-7-6,Vermillion Red,Beige,M6
+96,VM13553,2012-7-7,Alpine White,Black,DCT
+97,VM13554,2012-7-8,Alpine White,Black,M6
+98,VM13557,2012-7-9,Space Gray,Terra,M6
+99,VM13558,2012-7-10,LeMans Blue,Blk/Blue,M6
+100,VM13559,2012-7-11,Carbon Black,Blk/Blue,M6
+101,VM13560,2012-7-12,LeMans Blue,Blk/Blue,DCT
+102,VM13561,2012-7-13,Alpine White,Black,DCT
+103,VM13563,2012-7-14,Sapphire Black,Black,DCT
+104,VM13568,2012-7-15,Vermillion Red,Coral,M6
+105,VM13569,2012-7-16,Alpine White,Blk/Blue,M6
+106,VM13571,2012-7-17,Alpine White,Blk Sensatec,M6
+107,VM13573,2012-7-18,Carbon Black,Blk/Blue,M6
+108,VM13577,2012-7-19,Carbon Black,Black,DCT
+109,VM13578,2012-7-20,Jet Black,Terra,M6
+110,VM13579,2012-7-21,Carbon Black,Blk Sensatec,M6
+111,VM13581,2012-7-22,Jet Black,Blk Sensatec,DCT
+112,VM13587,2012-7-23,Vermillion Red,Oyster,M6
+113,VM13589,2012-7-24,Space Gray,Taupe,DCT
+114,VM13590,2012-7-25,Titanium Silver,Coral,DCT
+115,VM13593,2012-7-26,Cashmere Silver,Blk/Blue,M6
+116,VM13594,2012-7-27,Alpine White,Coral,DCT
+117,VM13608,2012-7-28,Alpine White,Black,DCT
+118,VM13611,2012-7-29,Carbon Black,Blk/Blue,M6
+119,VM13612,2012-7-30,Deep Sea Blue,Oyster,M6
+120,VM13613,2012-7-31,LeMans Blue,Blk/Blue,DCT
+121,VM13618,2012-8-1,Carbon Black,Oyster,DCT
+122,VM13621,2012-8-2,Carbon Black,Black,DCT
+123,VM13623,2012-8-3,Jet Black,Black,M6
+124,VM13624,2012-8-4,LeMans Blue,Blk/Blue,DCT
+125,VM13626,2012-8-5,Mineral Gray,Blk/Blue,DCT
+126,VM13630,2012-8-6,LeMans Blue,Terra,DCT
+127,VM13631,2012-8-7,LeMans Blue,Blk/Blue,M6
+128,VM13632,2012-8-8,Jet Black,Black,M6
+129,VM13633,2012-8-9,LeMans Blue,Blk Sensatec,DCT
+130,VM13634,2012-8-10,LeMans Blue,Blk/Blue,DCT
+131,VM13635,2012-8-11,Space Gray,Blk Sensatec,M6
+132,VM13636,2012-8-12,Carbon Black,Blk/Blue,DCT
+133,VM13638,2012-8-13,Space Gray,Black,DCT
+134,VM13639,2012-8-14,Jet Black,Black,M6
+135,VM13640,2012-8-15,Mineral Gray,Black,M6
+136,VM13642,2012-8-16,Alpine White,Blk/Blue,M6
+137,VM13643,2012-8-17,Mineral Gray,Black,M6
+138,VM13648,2012-8-18,Jet Black,Blk Sensatec,DCT
+139,VM13649,2012-8-19,Mineral Gray,Coral,DCT
+140,VM13650,2012-8-20,Jet Black,Coral,DCT
+141,VM13651,2012-8-21,Carbon Black,Blk/Blue,DCT
+142,VM13653,2012-8-22,Carbon Black,Blk/Blue,DCT
+143,VM13658,2012-8-23,Carbon Black,Black,M6
+144,VM13659,2012-8-24,Sapphire Black,Blk/Blue,DCT
+145,VM13660,2012-8-25,Carbon Black,Oyster,DCT
+146,VM13661,2012-8-26,Titanium Silver,Coral,DCT
+147,VM13663,2012-8-27,Deep Sea Blue,Black,M6
+148,VM13667,2012-8-28,Vermillion Red,Coral,DCT
+149,VM13668,2012-8-29,LeMans Blue,Blk/Blue,M6
+150,VM13672,2012-8-30,Jet Black,Black,DCT
+151,VM13673,2012-8-31,Alpine White,Black,M6
+152,VM13685,2012-9-1,Alpine White,Coral,DCT
+153,VM13688,2012-9-2,Sapphire Black,Blk/Blue,DCT
+154,VM13695,2012-9-3,Carbon Black,Blk/Blue,M6
+155,VM13697,2012-9-4,Mineral Gray,Coral,M6
+156,VM13698,2012-9-5,Mineral Gray,Blk/Blue,DCT
+157,VM13700,2012-9-6,Alpine White,Coral,DCT
+158,VM13705,2012-9-7,LeMans Blue,Blk/Blue,M6
+159,VM13706,2012-9-8,Space Gray,Oyster,M6
+160,VM13712,2012-9-9,Mineral Gray,Black,DCT
+161,VM13713,2012-9-10,Space Gray,Coral,DCT
+162,VM13714,2012-9-11,Mineral Gray,Coral,DCT
+163,VM13718,2012-9-12,Alpine White,Blk/Blue,DCT
+164,VM13722,2012-9-13,Alpine White,Black,DCT
+165,VM13723,2012-9-14,Alpine White,Blk Sensatec,DCT
+166,VM13732,2012-9-15,Carbon Black,Oyster,DCT
+167,VM13736,2012-9-16,Alpine White,Coral,DCT
+168,VM13738,2012-9-17,Carbon Black,Blk/Blue,DCT
+169,VM13739,2012-9-18,Alpine White,Black,DCT
+170,VM13743,2012-9-19,Space Gray,Taupe,M6
+171,VM13744,2012-9-20,Titanium Silver,Coral,DCT
+172,VM13745,2012-9-21,LeMans Blue,Blk/Blue,DCT
+173,VM13751,2012-9-22,Mineral Gray,Blk/Blue,M6
+174,VM13759,2012-9-23,LeMans Blue,Blk/Blue,M6
+175,VM13765,2012-9-24,Deep Sea Blue,Beige,DCT
+176,VM13767,2012-9-25,Alpine White,Blk/Blue,M6
+177,VM13770,2012-9-26,Mineral Gray,Coral,DCT
+178,VM13771,2012-9-27,Carbon Black,Coral,DCT
+179,VM13773,2012-9-28,Jet Black,Blk Sensatec,DCT
+180,VM13776,2012-9-29,Space Gray,Coral,M6
+181,VM13777,2012-9-30,Sapphire Black,Blk/Blue,DCT
+182,VM13781,2012-10-1,Alpine White,Blk/Blue,M6
+183,VM13784,2012-10-2,Blue Water,Beige,M6
+184,VM13786,2012-10-3,Alpine White,Black,M6
+185,VM13791,2012-10-4,LeMans Blue,Oyster,M6
+186,VM13792,2012-10-5,Carbon Black,Blk/Blue,M6
+187,VM13794,2012-10-6,Carbon Black,Black,DCT
+188,VM13795,2012-10-7,Alpine White,Black,DCT
+189,VM13796,2012-10-8,Alpine White,Blk/Blue,M6
+190,VM13797,2012-10-9,Alpine White,Coral,DCT
+191,VM13799,2012-10-10,Titanium Silver,Blk Sensatec,M6
+192,VM13800,2012-10-11,LeMans Blue,Blk/Blue,DCT
+193,VM13804,2012-10-12,Mineral Gray,Coral,DCT
+194,VM13807,2012-10-13,Alpine White,Black,DCT
+195,VM13811,2012-10-14,Jet Black,Blk/Blue,M6
+196,VM13814,2012-10-15,Mineral Gray,Taupe,DCT
+197,VM13816,2012-10-16,Jet Black,Blk Sensatec,M6
+198,VM13817,2012-10-17,Alpine White,Oyster,DCT
+199,VM13820,2012-10-18,Alpine White,Blk/Blue,DCT
+200,VM13822,2012-10-19,Titanium Silver,Coral,DCT
+201,VM13823,2012-10-20,Carbon Black,Blk/Blue,DCT
+202,VM13826,2012-10-21,Mineral Gray,Coral,DCT
+203,VM13829,2012-10-22,Mineral Gray,Coral,DCT
+204,VM13830,2012-10-23,Alpine White,Black,DCT
+205,VM13831,2012-10-24,Carbon Black,Blk/Blue,DCT
+206,VM13832,2012-10-25,Alpine White,Blk/Blue,DCT
+207,VM13833,2012-10-26,Titanium Silver,Black,DCT
+208,VM13837,2012-10-27,Alpine White,Coral,DCT
+209,VM13840,2012-10-28,Sapphire Black,Black,DCT
+210,VM13841,2012-10-29,LeMans Blue,Coral,M6
+211,VM13842,2012-10-30,LeMans Blue,Blk Sensatec,DCT
+212,VM13844,2012-10-31,Mineral Gray,Oyster,DCT
+213,VM13846,2012-11-1,Alpine White,Beige,DCT
+214,VM13850,2012-11-2,LeMans Blue,Blk/Blue,DCT
+215,VM13861,2012-11-3,Alpine White,Blk/Blue,M6
+216,VM13862,2012-11-4,Carbon Black,Blk/Blue,M6
+217,VM13866,2012-11-5,LeMans Blue,Blk/Blue,DCT
+218,VM13867,2012-11-6,LeMans Blue,Blk/Blue,M6
+219,VM13868,2012-11-7,LeMans Blue,Blk/Blue,M6
+220,VM13870,2012-11-8,Sapphire Black,Blk/Blue,DCT
+221,VM13871,2012-11-9,Space Gray,Coral,DCT
+222,VM13873,2012-11-10,Carbon Black,Coral,DCT
+223,VM13876,2012-11-11,LeMans Blue,Blk/Blue,DCT
+224,VM13877,2012-11-12,Mineral Gray,Coral,DCT
+225,VM13878,2012-11-13,Mineral Gray,Coral,DCT
+226,VM13882,2012-11-14,Deep Sea Blue,Blk/Blue,M6
+227,VM13887,2012-11-15,Jet Black,Black,DCT
+228,VM13888,2012-11-16,Jet Black,Black,DCT
+229,VM13889,2012-11-17,Jet Black,Coral,DCT
+230,VM13890,2012-11-18,LeMans Blue,Blk/Blue,M6
+231,VM13891,2012-11-19,Jet Black,Black,M6
+232,VM13892,2012-11-20,Jet Black,Black,M6
+233,VM13896,2012-11-21,Sapphire Black,Black,DCT
+234,VM13898,2012-11-22,LeMans Blue,Blk/Blue,M6
+235,VU41901,2012-11-23,Alpine White,Blk/Blue,M6
+236,VU41902,2012-11-24,Carbon Black,Terra,DCT
+237,VU41903,2012-11-25,Carbon Black,Coral,DCT
+238,VU41904,2012-11-26,Jet Black,Blk Sensatec,M6
+239,VU41905,2012-11-27,Mineral Gray,Oyster,M6
+240,VU41907,2012-11-28,Space Gray,Black,DCT
+241,VU41908,2012-11-29,LeMans Blue,Blk/Blue,M6
+242,VU41909,2012-11-30,Alpine White,Blk/Blue,M6
+243,VU41916,2012-12-1,Space Gray,Black,M6
+244,VU41917,2012-12-2,Blue Water,Black,M6
+245,VU41918,2012-12-3,Carbon Black,Oyster,DCT
+246,VU41920,2012-12-4,Carbon Black,Blk/Blue,DCT
+247,VU41922,2012-12-5,Titanium Silver,Blk Sensatec,M6
+248,VU41928,2012-12-6,Alpine White,Blk/Blue,M6
+249,VU41932,2012-12-7,Alpine White,Beige,M6
+250,VU41934,2012-12-8,Carbon Black,Blk/Blue,DCT
+251,VU41935,2012-12-9,Carbon Black,Black,M6
+252,VU41936,2012-12-10,Jet Black,Coral,DCT
+253,VU41937,2012-12-11,Jet Black,Blk Sensatec,M6
+254,VU41938,2012-12-12,Space Gray,Coral,DCT
+255,VU41939,2012-12-13,Jet Black,Black,DCT
+256,VU41940,2012-12-14,Alpine White,Coral,M6
+257,VU41941,2012-12-15,Carbon Black,Black,M6
+258,VU41942,2012-12-16,Jet Black,Black,DCT
+259,VU41943,2012-12-17,LeMans Blue,Blk/Blue,M6
+260,VU41948,2012-12-18,Vermillion Red,Taupe,DCT
+261,VU41954,2012-12-19,Sapphire Black,Blk/Blue,DCT
+262,VU41958,2012-12-20,Mineral Gray,Black,DCT
+263,VU41959,2012-12-21,Alpine White,Coral,DCT
+264,VU41961,2012-12-22,Sapphire Black,Blk/Blue,DCT
+265,VU41963,2012-12-23,Mineral Gray,Blk/Blue,M6
+266,VU41966,2012-12-24,Mineral Gray,Black,DCT
+267,VU41968,2012-12-25,Alpine White,Blk/Blue,DCT
+268,VU41969,2012-12-26,Deep Sea Blue,Blk/Blue,M6
+269,VU41977,2012-12-27,Vermillion Red,Oyster,DCT
+270,VU41978,2012-12-28,Sapphire Black,Beige Vinyl,DCT
+271,VU41980,2012-12-29,LeMans Blue,Coral,M6
+272,VU41983,2012-12-30,Deep Sea Blue,Beige Vinyl,DCT
+273,VU41988,2012-12-31,Vermillion Red,Oyster,DCT
+274,VU41991,2013-1-1,Alpine White,Terra,M6
+275,VU41997,2013-1-2,Carbon Black,Blk/Blue,DCT
+276,VU41999,2013-1-3,LeMans Blue,Blk/Blue,DCT
+277,VY60000,2013-1-4,Alpine White,Coral,M6
+278,VY60001,2013-1-5,LeMans Blue,Blk/Blue,M6
+279,VY60004,2013-1-6,LeMans Blue,Blk/Blue,DCT
+280,VY60006,2013-1-7,Alpine White,Blk/Blue,M6
+281,VY60012,2013-1-8,Mineral Gray,Black,DCT
+282,VY60017,2013-1-9,Alpine White,Coral,M6
+283,VY60023,2013-1-10,Jet Black,Black,DCT
+284,VY60026,2013-1-11,Carbon Black,Blk/Blue,M6
+285,VY60030,2013-1-12,Carbon Black,Blk/Blue,M6
+286,VY60036,2013-1-13,Sapphire Black,Black,DCT
+287,VY60038,2013-1-14,Alpine White,Coral,M6
+288,VY60041,2013-1-15,Carbon Black,Blk/Blue,DCT
+289,VY60042,2013-1-16,Alpine White,Blk Sensatec,DCT
+290,VY60043,2013-1-17,Mineral Gray,Taupe,DCT
+291,VY60045,2013-1-18,Jet Black,Blk/Blue,M6
+292,VY60047,2013-1-19,LeMans Blue,Blk/Blue,M6
+293,VY60050,2013-1-20,LeMans Blue,Blk/Blue,M6
+294,VY60051,2013-1-21,LeMans Blue,Blk/Blue,DCT
+295,VY60053,2013-1-22,Space Gray,Blk/Blue,DCT
+296,VY60054,2013-1-23,Mineral Gray,Blk Sensatec,DCT
+297,VY60055,2013-1-24,Alpine White,Blk Sensatec,DCT
+298,VY60056,2013-1-25,LeMans Blue,Taupe,M6
+299,VY60057,2013-1-26,Alpine White,Beige,DCT
+300,VY60058,2013-1-27,Mineral Gray,Coral,M6
+301,VY60071,2013-1-28,Deep Sea Blue,Blk/Blue,DCT
+302,VY60072,2013-1-29,LeMans Blue,Blk/Blue,M6
+303,VY60075,2013-1-30,Carbon Black,Blk/Blue,DCT
+304,VY60086,2013-1-31,Jet Black,Black,DCT
+305,VY60090,2013-2-1,Space Gray,Blk/Blue,DCT
+306,VY60091,2013-2-2,Alpine White,Black,DCT
+307,VY60093,2013-2-3,LeMans Blue,Blk/Blue,M6
+308,VY60096,2013-2-4,Space Gray,Blk/Blue,DCT
+309,VY60097,2013-2-5,LeMans Blue,Blk/Blue,M6
+310,VY60098,2013-2-6,LeMans Blue,Blk/Blue,M6
+311,VY60102,2013-2-7,Carbon Black,Blk/Blue,DCT
+312,VY60103,2013-2-8,Carbon Black,Blk/Blue,DCT
+313,VY60104,2013-2-9,Carbon Black,Blk/Blue,DCT
+314,VY60108,2013-2-10,Carbon Black,Coral,DCT
+315,VY60114,2013-2-11,Jet Black,Blk/Blue,M6
+316,VY60125,2013-2-12,Mineral Gray,Oyster,DCT
+317,VY60132,2013-2-13,LeMans Blue,Beige,DCT
+318,VY60133,2013-2-14,LeMans Blue,Beige,DCT
+319,VY60134,2013-2-15,LeMans Blue,Blk/Blue,DCT
+320,VY60135,2013-2-16,LeMans Blue,Blk/Blue,DCT
+321,VY60136,2013-2-17,LeMans Blue,Oyster,DCT
+322,VY60137,2013-2-18,LeMans Blue,Oyster,DCT
+323,VY60141,2013-2-19,Jet Black,Coral,DCT
+324,VY60147,2013-2-20,LeMans Blue,Blk/Blue,DCT
+325,VY60148,2013-2-21,LeMans Blue,Blk/Blue,DCT
+326,VY60155,2013-2-22,Carbon Black,Blk Sensatec,DCT
+327,VY60164,2013-2-23,Alpine White,Coral,M6
+328,VY60167,2013-2-24,Jet Black,Blk/Blue,M6
+329,VY60170,2013-2-25,Alpine White,Blk/Blue,DCT
+330,VY60172,2013-2-26,Alpine White,Black,M6
+331,VY60177,2013-2-27,Jet Black,Blk/Blue,DCT
+332,VY60183,2013-2-28,Jet Black,Coral,M6
+333,VY60186,2013-3-1,Carbon Black,Black,M6
+334,VY60188,2013-3-2,Jet Black,Black,DCT
+335,VY60190,2013-3-3,Alpine White,Blk Sensatec,DCT
+336,VY60193,2013-3-4,Space Gray,Blk/Blue,M6
+337,VY60194,2013-3-5,LeMans Blue,Oyster,DCT
+338,VY60195,2013-3-6,Jet Black,Blk/Blue,M6
+339,VY60202,2013-3-7,LeMans Blue,Blk/Blue,DCT
+340,VY60204,2013-3-8,Mineral Gray,Oyster,DCT
+341,VY60206,2013-3-9,Mineral Gray,Beige,DCT
+342,VY60207,2013-3-10,Alpine White,Blk/Blue,DCT
+343,VY60208,2013-3-11,Deep Sea Blue,Taupe,DCT
+344,VY60210,2013-3-12,Deep Sea Blue,Blk/Blue,DCT
+345,VY60215,2013-3-13,Alpine White,Blk Sensatec,M6
+346,VY60216,2013-3-14,Alpine White,Black,DCT
+347,VY60219,2013-3-15,Alpine White,Blk/Blue,DCT
+348,VY60222,2013-3-16,Sapphire Black,Blk/Blue,DCT
+349,VY60229,2013-3-17,Alpine White,Blk/Blue,DCT
+350,VY60232,2013-3-18,LeMans Blue,Blk/Blue,DCT
+351,VY60233,2013-3-19,Mineral Gray,Blk Sensatec,DCT
+352,VY60238,2013-3-20,LeMans Blue,Coral,DCT
+353,VY60243,2013-3-21,Space Gray,Blk/Blue,DCT
+354,VY60244,2013-3-22,Carbon Black,Coral,DCT
+355,VY60252,2013-3-23,Carbon Black,Blk/Blue,DCT
+356,VY60253,2013-3-24,Space Gray,Blk Sensatec,M6
+357,VY60254,2013-3-25,Mineral Gray,Blk/Blue,M6
+358,VY60259,2013-3-26,Space Gray,Coral,M6
+359,VY60260,2013-3-27,Vermillion Red,Black,M6
+360,VY60269,2013-3-28,Sapphire Black,Black,M6
+361,VY60270,2013-3-29,LeMans Blue,Blk/Blue,M6
+362,VY60272,2013-3-30,LeMans Blue,Oyster,DCT
+363,VY60273,2013-3-31,Alpine White,Blk/Blue,DCT
+364,VY60274,2013-4-1,Mineral Gray,Blk/Blue,DCT
+365,VY60277,2013-4-2,Mineral Gray,Blk Sensatec,DCT
+366,VY60279,2013-4-3,Deep Sea Blue,Oyster,M6
+367,VY60281,2013-4-4,Jet Black,Black,M6
+368,VY60282,2013-4-5,Mineral Gray,Oyster,M6
+369,VY60286,2013-4-6,LeMans Blue,Blk/Blue,DCT
+370,VY60288,2013-4-7,Sapphire Black,Blk/Blue,M6
+371,VY60290,2013-4-8,Mineral Gray,Black,DCT
+372,VY60297,2013-4-9,Alpine White,Blk/Blue,DCT
+373,VY60301,2013-4-10,Space Gray,Blk Sensatec,M6
+374,VY60302,2013-4-11,Alpine White,Coral,M6
+375,VY60311,2013-4-12,Jet Black,Black,DCT
+376,VY60313,2013-4-13,Alpine White,Coral,DCT
+377,VY60316,2013-4-14,Carbon Black,Blk/Blue,M6
+378,VY60318,2013-4-15,Sapphire Black,Blk/Blue,DCT
+379,VY60319,2013-4-16,LeMans Blue,Blk/Blue,DCT
+380,VY60323,2013-4-17,Alpine White,Blk/Blue,M6
+381,VY60325,2013-4-18,Jet Black,Blk Sensatec,M6
+382,VY60326,2013-4-19,Alpine White,Coral,M6
+383,VY60327,2013-4-20,Jet Black,Coral,DCT
+384,VY60329,2013-4-21,Mineral Gray,Oyster,DCT
+385,VY60331,2013-4-22,Mineral Gray,Black,DCT
+386,VY60333,2013-4-23,Alpine White,Blk/Blue,DCT
+387,VY60335,2013-4-24,Mineral Gray,Coral,M6
+388,VY60338,2013-4-25,Carbon Black,Black,DCT
+389,VY60342,2013-4-26,LeMans Blue,Blk/Blue,M6
+390,VY60343,2013-4-27,LeMans Blue,Blk/Blue,M6
+391,VY60344,2013-4-28,Carbon Black,Blk/Blue,DCT
+392,VY60345,2013-4-29,Sapphire Black,Blk/Blue,DCT
+393,VY60346,2013-4-30,Alpine White,Blk Sensatec,DCT
+394,VY60347,2013-5-1,Alpine White,Blk/Blue,DCT
+395,VY60349,2013-5-2,LeMans Blue,Blk/Blue,DCT
+396,VY60350,2013-5-3,Alpine White,Black,DCT
+397,VY60351,2013-5-4,Carbon Black,Blk/Blue,DCT
+398,VY60354,2013-5-5,Jet Black,Blk/Blue,DCT
+399,VY60355,2013-5-6,Mineral Gray,Black,DCT
+400,VY60356,2013-5-7,Carbon Black,Blk/Blue,M6
+401,VY60360,2013-5-8,Jet Black,Coral,M6
+402,VY60361,2013-5-9,Jet Black,Blk/Blue,M6
+403,VY60364,2013-5-10,Alpine White,Blk/Blue,DCT
+404,VY60367,2013-5-11,Jet Black,Coral,DCT
+405,VY60371,2013-5-12,LeMans Blue,Blk/Blue,DCT
+406,VY60372,2013-5-13,Carbon Black,Coral,DCT
+407,VY60374,2013-5-14,Alpine White,Blk/Blue,DCT
+408,VY60381,2013-5-15,Carbon Black,Blk/Blue,DCT
+409,VY60385,2013-5-16,Mineral Gray,Oyster,M6
+410,VY60386,2013-5-17,Mineral Gray,Coral,DCT
+411,VY60388,2013-5-18,Deep Sea Blue,Coral,DCT
+412,VY60393,2013-5-19,Alpine White,Black,M6
+413,VY60395,2013-5-20,Alpine White,Black,DCT
+414,VY60398,2013-5-21,Titanium Silver,Black,M6
+415,VY60400,2013-5-22,Cashmere Silver,Blk/Blue,DCT
+416,VY60401,2013-5-23,LeMans Blue,Blk/Blue,DCT
+417,VY60402,2013-5-24,Deep Sea Blue,Coral,M6
+418,VY60403,2013-5-25,Jet Black,Blk Sensatec,M6
+419,VY60404,2013-5-26,LeMans Blue,Black,DCT
+420,VY60406,2013-5-27,LeMans Blue,Oyster,DCT
+421,VY60410,2013-5-28,Mineral Gray,Coral,DCT
+422,VY60411,2013-5-29,Mineral Gray,Blk/Blue,DCT
+423,VY60413,2013-5-30,Alpine White,Blk/Blue,M6
+424,VY60415,2013-5-31,Deep Sea Blue,Blk Sensatec,M6
+425,VY60418,2013-6-1,Alpine White,Coral,M6
+426,VY60421,2013-6-2,LeMans Blue,Blk/Blue,DCT
+427,VY60424,2013-6-3,Jet Black,Blk Sensatec,M6
+428,VY60425,2013-6-4,Deep Sea Blue,Black,M6
+429,VY60432,2013-6-5,Mineral Gray,Blk Sensatec,M6
+430,VY60433,2013-6-6,LeMans Blue,Blk/Blue,DCT
+431,VY60434,2013-6-7,Space Gray,Black,M6
+432,VY60435,2013-6-8,Deep Sea Blue,Blk/Blue,M6
+433,VY60436,2013-6-9,Alpine White,Coral,DCT
+434,VY60443,2013-6-10,LeMans Blue,Blk/Blue,M6
+435,VY60446,2013-6-11,Carbon Black,Black,DCT
+436,VY60448,2013-6-12,LeMans Blue,Oyster,DCT
+437,VY60450,2013-6-13,Sapphire Black,Coral,DCT
+438,VY60451,2013-6-14,Carbon Black,Black,DCT
+439,VY60452,2013-6-15,LeMans Blue,Blk/Blue,DCT
+440,VY60453,2013-6-16,Alpine White,Coral,DCT
+441,VY60455,2013-6-17,LeMans Blue,Blk Sensatec,M6
+442,VY60460,2013-6-18,LeMans Blue,Blk/Blue,M6
+443,VY60461,2013-6-19,LeMans Blue,Blk/Blue,M6
+444,VY60463,2013-6-20,Sapphire Black,Blk/Blue,DCT
+445,VY60464,2013-6-21,Sapphire Black,Blk/Blue,M6
+446,VY60465,2013-6-22,Carbon Black,Black,M6
+447,VY60466,2013-6-23,Mineral Gray,Coral,M6
+448,VY60468,2013-6-24,LeMans Blue,Oyster,M6
+449,VY60470,2013-6-25,LeMans Blue,Black,DCT
+450,VY60472,2013-6-26,Mineral Gray,Black,DCT
+451,VY60473,2013-6-27,LeMans Blue,Blk/Blue,DCT
+452,VY60478,2013-6-28,LeMans Blue,Black,DCT
+453,VY60481,2013-6-29,Carbon Black,Black,DCT
+454,VY60484,2013-6-30,Alpine White,Blk/Blue,M6
+455,VY60485,2013-7-1,Sapphire Black,Beige,DCT
+456,VY60491,2013-7-2,Space Gray,Coral,DCT
+457,VY60492,2013-7-3,LeMans Blue,Blk/Blue,M6
+458,VY60497,2013-7-4,LeMans Blue,Black,DCT
+459,VY60502,2013-7-5,Alpine White,Blk Sensatec,DCT
+460,VY60504,2013-7-6,Alpine White,Blk/Blue,DCT
+461,VY60506,2013-7-7,LeMans Blue,Blk/Blue,DCT
+462,VY60508,2013-7-8,LeMans Blue,Blk Sensatec,M6
+463,VY60510,2013-7-9,Alpine White,Blk/Blue,M6
+464,VY60515,2013-7-10,Carbon Black,Blk/Blue,DCT
+465,VY60522,2013-7-11,LeMans Blue,Blk/Blue,M6
+466,VY60523,2013-7-12,LeMans Blue,Blk/Blue,DCT
+467,VY60527,2013-7-13,Mineral Gray,Oyster,M6
+468,VY60528,2013-7-14,Alpine White,Coral,DCT
+469,VY60529,2013-7-15,LeMans Blue,Blk/Blue,DCT
+470,VY60533,2013-7-16,Space Gray,Taupe,DCT
+471,VY60534,2013-7-17,Jet Black,Black,M6
+472,VY60536,2013-7-18,Jet Black,Blk Sensatec,DCT
+473,VY60538,2013-7-19,LeMans Blue,Blk/Blue,M6
+474,VY60540,2013-7-20,Mineral Gray,Blk/Blue,M6
+475,VY60541,2013-7-21,Mineral Gray,Oyster,DCT
+476,VY60542,2013-7-22,Alpine White,Blk/Blue,M6
+477,VY60543,2013-7-23,LeMans Blue,Taupe,DCT
+478,VY60544,2013-7-24,Carbon Black,Blk/Blue,M6
+479,VY60545,2013-7-25,Alpine White,Coral,DCT
+480,VY60546,2013-7-26,Alpine White,Blk/Blue,DCT
+481,VY60551,2013-7-27,Mineral Gray,Black,DCT
+482,VY60556,2013-7-28,Carbon Black,Blk/Blue,DCT
+483,VY60565,2013-7-29,Deep Sea Blue,Blk/Blue,M6
+484,VY60566,2013-7-30,Carbon Black,Blk/Blue,M6
+485,VY60569,2013-7-31,Alpine White,Blk/Blue,DCT
+486,VY60570,2013-8-1,Titanium Silver,Black,M6
+487,VY60575,2013-8-2,Alpine White,Blk/Blue,DCT
+488,VY60578,2013-8-3,Sapphire Black,Coral,M6
+489,VY60581,2013-8-4,Space Gray,Coral,M6
+490,VY60582,2013-8-5,Space Gray,Coral,M6
+491,VY60590,2013-8-6,LeMans Blue,Blk/Blue,DCT
+492,VY60592,2013-8-7,Carbon Black,Blk/Blue,M6
+493,VY60597,2013-8-8,Alpine White,Coral,M6
+494,VY60606,2013-8-9,Mineral Gray,Blk/Blue,DCT
+495,VY60612,2013-8-10,Alpine White,Blk/Blue,DCT
+496,VY60615,2013-8-11,LeMans Blue,Blk/Blue,DCT
+497,VY60616,2013-8-12,Jet Black,Blk/Blue,M6
+498,VY60619,2013-8-13,Alpine White,Blk/Blue,DCT
+499,VY60620,2013-8-14,Space Gray,Coral,M6
+500,VY60622,2013-8-15,Sapphire Black,Blk/Blue,M6
+501,VY60626,2013-8-16,Alpine White,Oyster,M6
+502,VY60640,2013-8-17,LeMans Blue,Blk/Blue,M6
+503,VY60644,2013-8-18,Sapphire Black,Black,M6
+504,VY60645,2013-8-19,Mineral Gray,Blk/Blue,DCT
+505,VY60646,2013-8-20,Mineral Gray,Blk/Blue,M6
+506,VY60652,2013-8-21,Jet Black,Blk/Blue,DCT
+507,VY60658,2013-8-22,Sapphire Black,Black,DCT
+508,VY60662,2013-8-23,Alpine White,Taupe,DCT
+509,VY60665,2013-8-24,Carbon Black,Black,M6
+510,VY60666,2013-8-25,Jet Black,Blk/Blue,M6
+511,VY60667,2013-8-26,Alpine White,Black,M6
+512,VY60670,2013-8-27,Alpine White,Oyster,DCT
+513,VY60681,2013-8-28,Sapphire Black,Coral,DCT
+514,VY60684,2013-8-29,Space Gray,Black,DCT
+515,VY60686,2013-8-30,LeMans Blue,Blk/Blue,M6
+516,VY60687,2013-8-31,LeMans Blue,Blk/Blue,M6
+517,VY60688,2013-9-1,Mineral Gray,Black,DCT
+518,VY60689,2013-9-2,LeMans Blue,Blk/Blue,M6
+519,VY60693,2013-9-3,Alpine White,Coral,M6
+520,VY60694,2013-9-4,Titanium Silver,Black,M6
+521,VY60697,2013-9-5,LeMans Blue,Blk/Blue,DCT
+522,VY60699,2013-9-6,Carbon Black,Black,DCT
+523,VY60700,2013-9-7,Deep Sea Blue,Coral,M6
+524,VY60702,2013-9-8,Deep Sea Blue,Blk/Blue,M6
+525,VY60711,2013-9-9,Alpine White,Blk Sensatec,M6
+526,VY60715,2013-9-10,Sapphire Black,Blk/Blue,M6
+527,VY60721,2013-9-11,Sapphire Black,Oyster,DCT
+528,VY60726,2013-9-12,Alpine White,Blk/Blue,DCT
+529,VY60727,2013-9-13,Sapphire Black,Blk/Blue,M6
+530,VY60734,2013-9-14,Space Gray,Blk Sensatec,DCT
+531,VY60736,2013-9-15,Alpine White,Blk/Blue,DCT
+532,VY60737,2013-9-16,Alpine White,Coral,DCT
+533,VY60739,2013-9-17,Titanium Silver,Black,DCT
+534,VY60740,2013-9-18,Mineral Gray,Coral,M6
+535,VY60745,2013-9-19,Titanium Silver,Coral,M6
+536,VY60757,2013-9-20,Alpine White,Oyster,DCT
+537,VY60759,2013-9-21,LeMans Blue,Oyster,DCT
+538,VY60765,2013-9-22,Jet Black,Blk/Blue,DCT
+539,VY60766,2013-9-23,Carbon Black,Blk/Blue,DCT
+540,VY60768,2013-9-24,Carbon Black,Blk/Blue,DCT
+541,VY60771,2013-9-25,Alpine White,Black,M6
+542,VY60773,2013-9-26,Carbon Black,Oyster,DCT
+543,VY60774,2013-9-27,Mineral Gray,Black,DCT
+544,VY60778,2013-9-28,Carbon Black,Blk/Blue,M6
+545,VY60782,2013-9-29,Alpine White,Coral,DCT
+546,VY60783,2013-9-30,Alpine White,Coral,DCT
+547,VY60785,2013-10-1,Carbon Black,Blk/Blue,M6
+548,VY60788,2013-10-2,Mineral Gray,Black,DCT
+549,VY60793,2013-10-3,LeMans Blue,Blk/Blue,M6
+550,VY60799,2013-10-4,Carbon Black,Oyster,DCT
+551,VY60805,2013-10-5,Carbon Black,Black,M6
+552,VY60806,2013-10-6,Carbon Black,Blk/Blue,M6
+553,VY60809,2013-10-7,LeMans Blue,Blk/Blue,M6
+554,VY60816,2013-10-8,Alpine White,Blk Sensatec,M6
+555,VY60818,2013-10-9,LeMans Blue,Blk Sensatec,M6
+556,VY60821,2013-10-10,Carbon Black,Blk Sensatec,DCT
+557,VY60822,2013-10-11,Sapphire Black,Blk/Blue,M6
+558,VY60825,2013-10-12,LeMans Blue,Black,M6
+559,VY60826,2013-10-13,Alpine White,Coral,DCT
+560,VY60829,2013-10-14,Vermillion Red,Oyster,M6
+561,VY60833,2013-10-15,Deep Sea Blue,Blk/Blue,DCT
+562,VY60834,2013-10-16,Jet Black,Blk/Blue,DCT
+563,VY60839,2013-10-17,Carbon Black,Oyster,M6
+564,VY60841,2013-10-18,LeMans Blue,Blk/Blue,M6
+565,VY60845,2013-10-19,Mineral Gray,Coral,M6
+566,VY60851,2013-10-20,Sapphire Black,Taupe,DCT
+567,VY60852,2013-10-21,Titanium Silver,Taupe,DCT
+568,VY60853,2013-10-22,Jet Black,Black,M6
+569,VY60855,2013-10-23,LeMans Blue,Blk/Blue,DCT
+570,VY60858,2013-10-24,Jet Black,Blk Sensatec,M6
+571,VY60862,2013-10-25,LeMans Blue,Blk/Blue,DCT
+572,VY60867,2013-10-26,Mineral Gray,Black,DCT
+573,VY60871,2013-10-27,Sapphire Black,Blk/Blue,DCT
+574,VY60873,2013-10-28,Vermillion Red,Blk/Blue,DCT
+575,VY60878,2013-10-29,Alpine White,Coral,M6
+576,VY60879,2013-10-30,Sapphire Black,Black,DCT
+577,VY60885,2013-10-31,Sapphire Black,Coral,DCT
+578,VY60890,2013-11-1,Mineral Gray,Blk/Blue,DCT
+579,VY60891,2013-11-2,Alpine White,Coral,M6
+580,VY60894,2013-11-3,LeMans Blue,Blk Sensatec,M6
+581,VY60895,2013-11-4,Space Gray,Black,M6
+582,VY60896,2013-11-5,Carbon Black,Blk/Blue,DCT
+583,VY99701,2013-11-6,Mineral Gray,Oyster,DCT
+584,VY99702,2013-11-7,Carbon Black,Oyster,DCT
+585,VY99703,2013-11-8,Carbon Black,Blk/Blue,DCT
+586,VY99704,2013-11-9,Alpine White,Blk/Blue,M6
