@@ -7,7 +7,6 @@ var expressHbs = require('express3-handlebars');
 var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 var MongoStore = require('connect-mongo')(expressSession);
-
 //mongoDB Database Settings
 var MongoClient = require('mongodb').MongoClient;
 var mongoURL = "mongodb://test:test@ds045557.mongolab.com:45557/135is";

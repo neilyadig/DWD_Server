@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>135is Registry</title>
+		<title>BMW 135is Registry</title>
 
 		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="/public/css/app.css">
@@ -12,11 +12,19 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-default" role="navigation">
+
 			<div class="container">
+
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Home</a>
+
+					<a class="navbar-brand" href="/">
+						<img class=img-responsive src="public/img/header2.png">
+					</a>
+
 				</div>
+
 				<div class="collapse navbar-collapse">
+
           <ul class="nav navbar-nav">
               <li><a href="/registry">Registry</a></li>
 <!--               <li><a href="/set_session">Set Session (?myValue=X)</a></li> -->
@@ -24,13 +32,16 @@
               <li><a href="/stats">Stats</a></li>
               <li><a href="/about">About</a></li>
           </ul>
+
           <div class='nav navbar-text navbar-right'>
+
             {{#if loggedInUsername}}
               Logged in as <b>{{loggedInUsername}}</b>.
               <a href='/logout' class='navbar-link'>Logout</a>
             {{else}}
               <a href='/login' class='navbar-link'>Login</a>
             {{/if}}
+
           </div>
         </div>
 			</div>
