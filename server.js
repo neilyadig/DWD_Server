@@ -11,9 +11,13 @@ var MongoStore = require('connect-mongo')(expressSession);
 var MongoClient = require('mongodb').MongoClient;
 var mongoURL = "mongodb://test:test@ds045557.mongolab.com:45557/135is";
 
+
+
 //Enable Cookies
 app.use( bodyParser() );
 app.use( cookieParser() );
+
+
 
 //Enable Sessions and Mongo-connected Sessions
 app.use( expressSession({
@@ -21,9 +25,15 @@ app.use( expressSession({
 	store: new MongoStore({url: mongoURL})
 }) );
 
+
+
+
 //Enable Handlebars
 app.engine('handlebars', expressHbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
+
+
+
 
 //Checking for Session Cookie, then move on to next part of server.js
 function checkLoggedIn(req, res, next){
@@ -37,15 +47,24 @@ function checkLoggedIn(req, res, next){
 
 app.use(checkLoggedIn);
 
+
+
+
 //Serve up index page at /
 app.get('/', function(req, res){
 	res.render('index');
 });
 
+
+
+
 //Playing with param query strings in URL
 app.get('/users/:user_id', function(req,res){
 	res.send("The user id is: " + req.params.user_id);
 });
+
+
+
 
 // // people?id=5
 // app.get('/people', function(req, res){
@@ -56,10 +75,15 @@ app.get('/users/:user_id', function(req,res){
 // 	res.render("people", {id: id});
 // });
 
+
+
 //Login Page View
 app.get('/login', function(req, res){
 	res.render('login');
 });
+
+
+
 
 //Check password (hardcoded)
 function passwordIsValid(user, pass) {
@@ -85,6 +109,9 @@ app.post('/login', function(req, res){
 	}
 });
 
+
+
+
 // // /set_session?myValue=abc
 // app.get('/set_session', function(req, res){
 //   if (!req.query.myValue){
@@ -100,6 +127,9 @@ app.post('/login', function(req, res){
 // 	res.send("session.myValue: " + req.session.myValue);
 // });
 
+
+
+//ROUTES
 //Registry View
 app.get('/registry', function(req, res){
 	res.render('registry');
@@ -115,12 +145,20 @@ app.get('/about', function(req, res){
 	res.render('about');
 });
 
+
+
+
 app.use('/public', express.static('public'));
 
 var port = Number(process.env.PORT || 5000);
 
 //Define Global db variable to be able to access db outside of MongoClient.connect
 var db;
+
+
+
+
+
 
 //Playing with mongo and URL query strings
 //Normally use app.post via req.body
@@ -139,6 +177,10 @@ app.get('/database', function(req, res){
 });
 
 
+
+
+
+
 //best way to display/sort database
 app.get('/read_database', function(req,res){
 	var collection = db.collection('test_insert');
@@ -146,6 +188,54 @@ app.get('/read_database', function(req,res){
 		var item = items[0];
 		res.send('The user is: ' + item.status);
 	});
+});
+
+
+//Register Route
+app.get('/register', function(req, res){
+	res.render('register');
+});
+
+app.post('/register', function(req, res){
+	var enteredVIN = req.body.shortVIN;
+	console.log('enteredVIN', enteredVIN);
+	//find car by shortVIN
+	//if found, display that object AND new form to append more info to object
+	//if not found, rerender form with "nothing was found" error
+	//want a shortVIN matching supplied input
+	var collection = db.collection('importTest');
+	collection.findOne({shortVIN:enteredVIN}, function(err, obj){
+		if (err){
+			console.log('Error!!', err);
+		}
+
+		if (obj){
+			//res.send("I found it!");
+			console.log(obj);
+			res.render('registerStep2', {foundVIN:obj.shortVIN, foundBuildNo:obj.buildNo})
+		}
+
+		else {
+			res.send("I had a problem finding it");
+		}
+	})
+
+});
+
+app.post('/registerStep2', function(req, res){
+	var username = req.body.username;
+	var foundVIN = req.body.foundVIN;
+	var collection = db.collection('importTest');
+	collection.update({shortVIN:foundVIN},
+		{$set: {
+			username: username
+		}
+	}, function(err){
+		if (err) {
+			console.log('Error!!', err);
+		}
+		res.send("Successfully Claimed!");
+	})
 });
 
 //Connect to mongoDB
