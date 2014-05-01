@@ -173,7 +173,7 @@ app.post('/register', function(req, res){
 	//if not found, rerender form with "nothing was found" error
 	//want a shortVIN matching supplied input
 
-	var collection = db.collection('importTest'); //Connect to Collection
+	var collection = mongoDb.collection('importTest'); //Connect to Collection
 
 	collection.findOne( {shortVIN: enteredVIN}, function(err, obj){  //MongoDB method that searches for 1 object in database {key: enteredValue}
 	if (err){
