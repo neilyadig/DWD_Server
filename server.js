@@ -7,18 +7,26 @@ var expressHbs = require('express3-handlebars');
 var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 var MongoStore = require('connect-mongo')(expressSession);
-//mongoDB Database Settings
-var MongoClient = require('mongodb').MongoClient;
-var mongoURL = "mongodb://test:test@ds045557.mongolab.com:45557/135is";
+//mongoDB Database URL
+var mongoUrl = "mongodb://test:test@ds045557.mongolab.com:45557/135is";
+//Local Mongo Server JS
+var mongoDb = require('./mongo');
+
+var port = Number(process.env.PORT || 5000);
+
+//Define Global db variable to be able to access db outside of MongoClient.connect
+var db;
 
 //Enable Cookies
 app.use( bodyParser() );
 app.use( cookieParser() );
 
+app.use('/public', express.static('public'));
+
 //Enable Sessions and Mongo-connected Sessions
 app.use( expressSession({
 	secret: 'thesecret',
-	store: new MongoStore({url: mongoURL})
+	store: new MongoStore({url: mongoUrl})
 }) );
 
 //Enable Handlebars
@@ -37,15 +45,39 @@ function checkLoggedIn(req, res, next){
 
 app.use(checkLoggedIn);
 
+////////////
+// ROUTES //
+////////////
+
 //Serve up index page at /
 app.get('/', function(req, res){
 	res.render('index');
 });
 
-//Playing with param query strings in URL
-app.get('/users/:user_id', function(req,res){
-	res.send("The user id is: " + req.params.user_id);
+//Login Page View
+app.get('/login', function(req, res){
+	res.render('login');
 });
+
+//Data Viz View
+app.get('/stats', function(req, res){
+	res.render('stats');
+});
+
+//About View
+app.get('/about', function(req, res){
+	res.render('about');
+});
+
+//Register Route
+app.get('/register', function(req, res){
+	res.render('register');
+});
+
+// //Playing with param query strings in URL
+// app.get('/users/:user_id', function(req,res){
+// 	res.send("The user id is: " + req.params.user_id);
+// });
 
 // // people?id=5
 // app.get('/people', function(req, res){
@@ -56,34 +88,17 @@ app.get('/users/:user_id', function(req,res){
 // 	res.render("people", {id: id});
 // });
 
-//Login Page View
-app.get('/login', function(req, res){
-	res.render('login');
-});
 
 //Check password (hardcoded)
-function passwordIsValid(user, pass) {
-	if (user === 'itpclass' && pass === 'letmein') {
-		return true;
-	} else {
-		return false;
-	}
-}
+// function passwordIsValid(user, pass) {
+// 	if (user === 'itpclass' && pass === 'letmein') {
+// 		return true;
+// 	} else {
+// 		return false;
+// 	}
+// }
 
-//Post Login User/Pass for session recognition
-app.post('/login', function(req, res){
-	console.log('body params:', req.body);
 
-	var username = req.body['username'];
-	var password = req.body['password'];
-
-	if ( passwordIsValid(username, password) ) {
-		req.session.username = username;
-		res.redirect('/');
-	} else {
-		res.render('login', {failedLogin: true});
-	}
-});
 
 // // /set_session?myValue=abc
 // app.get('/set_session', function(req, res){
@@ -101,27 +116,12 @@ app.post('/login', function(req, res){
 // });
 
 //ROUTES
-//Registry View
-app.get('/registry', function(req, res){
-	res.render('registry');
-});
+// //Registry View
+// app.get('/registry', function(req, res){
+// 	res.render('registry');
+// });
 
-//Data Viz View
-app.get('/stats', function(req, res){
-	res.render('stats');
-});
 
-//About View
-app.get('/about', function(req, res){
-	res.render('about');
-});
-
-app.use('/public', express.static('public'));
-
-var port = Number(process.env.PORT || 5000);
-
-//Define Global db variable to be able to access db outside of MongoClient.connect
-var db;
 
 //Playing with mongo and URL query strings
 //Normally use app.post via req.body
@@ -129,7 +129,7 @@ var db;
 app.get('/database', function(req, res){
 	var username = req.query.username
 	var status = req.query.status;
-	var collection = db.collection('test_insert');
+	var collection = mongoDb.collection('test_insert');
 	collection.insert({username:username, status:status}, function(err, count){
 		if (err){
 			console.log('Got an error!', err);
@@ -141,16 +141,26 @@ app.get('/database', function(req, res){
 
 //best way to display/sort database
 app.get('/read_database', function(req,res){
-	var collection = db.collection('test_insert');
+	var collection = mongoDb.collection('test_insert');
 	collection.find({username:'neil'}).toArray(function(err, items){
 		var item = items[0];
 		res.send('The user is: ' + item.status);
 	});
 });
 
-//Register Route
-app.get('/register', function(req, res){
-	res.render('register');
+//Post Login User/Pass for session recognition
+app.post('/login', function(req, res){
+	console.log('body params:', req.body);
+
+	var username = req.body['username'];
+	var password = req.body['password'];
+
+	if ( passwordIsValid(username, password) ) {
+		req.session.username = username;
+		res.redirect('/');
+	} else {
+		res.render('login', {failedLogin: true});
+	}
 });
 
 //Step 1:
@@ -165,17 +175,17 @@ app.post('/register', function(req, res){
 
 	var collection = db.collection('importTest'); //Connect to Collection
 
-	collection.findOne( {shortVIN:enteredVIN}, function(err, obj){  //MongoDB method that searches for 1 object in database {key: enteredValue}
-		if (err){
-			console.log('Error!!', err);
-		} if (obj){ //If the obj is found and the value is not undefined
-			//res.send("I found it!");
-			console.log(obj);
-			res.render('registerStep2', {foundVIN:obj.shortVIN, foundBuildNo:obj.buildNo})
-		} else {
-			res.send("We experienced an issue finding a BMW 135is with that VIN.");
-		}
-	})
+	collection.findOne( {shortVIN: enteredVIN}, function(err, obj){  //MongoDB method that searches for 1 object in database {key: enteredValue}
+	if (err){
+		console.log('Error!!', err);
+	} if (obj){ //If the obj is found and the value is not undefined
+		//res.send("I found it!");
+		console.log(obj);
+		res.render('registerStep2', {foundVIN: obj.shortVIN, foundBuildNo: obj.buildNo})
+	} else {
+		res.send("We experienced an issue finding a BMW 135is with that VIN.");
+	}
+})
 });
 
 
@@ -184,30 +194,42 @@ app.post('/register', function(req, res){
 app.post('/registerStep2', function(req, res){
 	var username = req.body.username;
 	var foundVIN = req.body.foundVIN;
-	var collection = db.collection('importTest');
+	var collection = mongoDb.collection('importTest');
 
 	collection.update(
 
-		{ shortVIN:foundVIN },		//Find matching object in database
-		{ $set: 									//MongoDB operator (sets value/adds field and sets value if it doesn't exist) - Can use this for notes, state, etc.
-			{ username: username }	//Sets user-entered username
-		},
-		function(err){
-			if (err) {
-				console.log('Error!!', err);
-			}
-			res.send("Successfully Claimed!");
-		})
+		{ shortVIN: foundVIN },		//Find matching object in database
+		{ $set: 									 //MongoDB operator (sets value/adds field and sets value if it doesn't exist) - Can use this for notes, state, etc.
+		{ username: username }	 //Sets user-entered username
+	},
+	function(err){
+		if (err) {
+			console.log('Error!!', err);
+		}
+		res.send("Successfully Claimed!");
+	})
+});
+
+//Display Table of Data
+app.get('/registry', function(req, res){
+	console.log("Checking logging...")
+	var collection = mongoDb.collection('importTest');
+	collection.find( {}, { sort:[ ["buildNo", 1] ] } ).toArray(function(err, items){
+		// var item = items[0];
+		if (err){
+			console.log("Error!", err);
+		} else {
+			console.log("The Items are in an Array!", items);
+		}
+		res.render('registry', {objects: items});
 	});
+});
+
 
 //Connect to mongoDB
-//Must ensure db connection prior to running app (listening to port)
-//Set _db = db to be able to access database globally
-MongoClient.connect(mongoURL, function(err, _db){
-	if (err) {
-		console.log('There was an error: ' + err);
-	}
-	db = _db;
-	console.log('Connected to Mongo');
-	app.listen(port);
-});
+mongoDb.connect(mongoUrl, function(){
+  console.log('Connected to mongo at: ' + mongoUrl);
+  app.listen(port, function(){
+    console.log('Server is listening on port: '+port);
+  });
+})

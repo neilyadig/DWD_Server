@@ -1,3 +1,24 @@
 SHOW FORMATTED DATABASE HERE!
+<table class="table table-striped">
 
-Claim your vehicle
+<tr>
+  <th>VIN:</th>
+  <th>Build number:</th>
+  <th>Date:</th>
+  <th>Exterior:</th>
+  <th>Interior:</th>
+  <th>Transmission:</th>
+</tr>
+
+{{#each objects}}
+  <tr>
+    <td>{{this.shortVIN}}</td>
+    <td>{{this.buildNo}}</td>
+    <td>{{this.date}}</td>
+    <td>{{this.extColor}}</td>
+    <td>{{this.intColor}}</td>
+    <td>{{this.trans}}</td>
+  </tr>
+{{/each}}
+
+</table>
