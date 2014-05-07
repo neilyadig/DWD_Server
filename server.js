@@ -11,6 +11,7 @@ var MongoStore = require('connect-mongo')(expressSession);
 var mongoUrl = "mongodb://test:test@ds045557.mongolab.com:45557/135is";
 //Local Mongo Server JS
 var mongoDb = require('./mongo');
+var userMiddleware = require('./middleware/user');
 
 var port = Number(process.env.PORT || 5000);
 
@@ -33,17 +34,7 @@ app.use( expressSession({
 app.engine('handlebars', expressHbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
-//Checking for Session Cookie, then move on to next part of server.js
-function checkLoggedIn(req, res, next){
-	console.log('inside checkLoggedIn function');
-
-	if (req.session.username) {
-		res.locals.loggedInUsername = req.session.username;
-	}
-	next();
-}
-
-app.use(checkLoggedIn);
+app.use(userMiddleware.checkLoggedIn);
 
 ////////////
 // ROUTES //
@@ -127,7 +118,7 @@ app.get('/register', function(req, res){
 //Normally use app.post via req.body
 // database?username=abcd&status=hello
 app.get('/database', function(req, res){
-	var username = req.query.username
+	var username = req.query.username;
 	var status = req.query.status;
 	var collection = mongoDb.collection('test_insert');
 	collection.insert({username:username, status:status}, function(err, count){
@@ -181,16 +172,17 @@ app.post('/register', function(req, res){
 	} if (obj){ //If the obj is found and the value is not undefined
 		//res.send("I found it!");
 		console.log(obj);
-		res.render('registerStep2', {foundVIN: obj.shortVIN, foundBuildNo: obj.buildNo})
+		res.render('registerStep2', {foundVIN: obj.shortVIN, foundBuildNo: obj.buildNo});
 	} else {
 		res.send("We experienced an issue finding a BMW 135is with that VIN.");
 	}
-})
+});
 });
 
 
 //Step 2:
 //Add Username to matching Database Object
+//Want to add , userMiddleware.requireUser ...
 app.post('/registerStep2', function(req, res){
 	var username = req.body.username;
 	var foundVIN = req.body.foundVIN;
@@ -207,14 +199,18 @@ app.post('/registerStep2', function(req, res){
 			console.log('Error!!', err);
 		}
 		res.send("Successfully Claimed!");
-	})
+	});
 });
 
 //Display Table of Data
 app.get('/registry', function(req, res){
-	console.log("Checking logging...")
+	console.log("Checking logging...");
 	var collection = mongoDb.collection('importTest');
-	collection.find( {}, { sort:[ ["buildNo", 1] ] } ).toArray(function(err, items){
+	collection.find( {},
+		{
+		sort:[ ["buildNo", 1] ]
+		}
+			).toArray( function(err, items) {
 		// var item = items[0];
 		if (err){
 			console.log("Error!", err);
@@ -232,4 +228,4 @@ mongoDb.connect(mongoUrl, function(){
   app.listen(port, function(){
     console.log('Server is listening on port: '+port);
   });
-})
+});

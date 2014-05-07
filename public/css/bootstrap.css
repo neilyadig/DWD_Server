@@ -5,6 +5,14 @@
  */
 
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+#colorChart svg {
+  height: 400px;
+}
+
+#transChart svg {
+  height: 400px;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
