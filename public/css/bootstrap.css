@@ -13,6 +13,14 @@
   height: 400px;
 }
 
+#intColorChart svg {
+  height: 400px;
+}
+
+#intExtComboChart svg {
+  height: 400px;
+}
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;

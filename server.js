@@ -22,7 +22,6 @@ var db;
 app.use( bodyParser() );
 app.use( cookieParser() );
 
-app.use('/public', express.static('public'));
 
 //Enable Sessions and Mongo-connected Sessions
 app.use( expressSession({
@@ -34,7 +33,7 @@ app.use( expressSession({
 app.engine('handlebars', expressHbs({defaultLayout:'main'}));
 app.set('view engine', 'handlebars');
 
-app.use(userMiddleware.checkLoggedIn);
+app.use(userMiddleware.checkIfLoggedIn);
 
 ////////////
 // ROUTES //
@@ -42,12 +41,23 @@ app.use(userMiddleware.checkLoggedIn);
 
 //Serve up index page at /
 app.get('/', function(req, res){
-	res.render('index');
+  var coll = mongoDb.collection('users');
+  coll.find({}).toArray(function(err, users){
+    res.render('index', {users:users});
+  })
 });
-
 //Login Page View
 app.get('/login', function(req, res){
 	res.render('login');
+});
+
+app.get('/logout', function(req, res){
+  delete req.session.username;
+  res.redirect('/');
+});
+
+app.get('/not_allowed', function(req, res){
+  res.render('not_allowed');
 });
 
 //Data Viz View
@@ -117,46 +127,46 @@ app.get('/register', function(req, res){
 //Playing with mongo and URL query strings
 //Normally use app.post via req.body
 // database?username=abcd&status=hello
-app.get('/database', function(req, res){
-	var username = req.query.username;
-	var status = req.query.status;
-	var collection = mongoDb.collection('test_insert');
-	collection.insert({username:username, status:status}, function(err, count){
-		if (err){
-			console.log('Got an error!', err);
-		}
+// app.get('/database', function(req, res){
+// 	var username = req.query.username;
+// 	var status = req.query.status;
+// 	var collection = mongoDb.collection('test_insert');
+// 	collection.insert({username:username, status:status}, function(err, count){
+// 		if (err){
+// 			console.log('Got an error!', err);
+// 		}
+//
+// 		res.send('The count is:' + count);
+// 	});
+// });
 
-		res.send('The count is:' + count);
-	});
-});
-
-//best way to display/sort database
-app.get('/read_database', function(req,res){
-	var collection = mongoDb.collection('test_insert');
-	collection.find({username:'neil'}).toArray(function(err, items){
-		var item = items[0];
-		res.send('The user is: ' + item.status);
-	});
-});
+// //best way to display/sort database
+// app.get('/read_database', function(req,res){
+// 	var collection = mongoDb.collection('test_insert');
+// 	collection.find({username:'neil'}).toArray(function(err, items){
+// 		var item = items[0];
+// 		res.send('The user is: ' + item.status);
+// 	});
+// });
 
 //Post Login User/Pass for session recognition
-app.post('/login', function(req, res){
-	console.log('body params:', req.body);
-
-	var username = req.body['username'];
-	var password = req.body['password'];
-
-	if ( passwordIsValid(username, password) ) {
-		req.session.username = username;
-		res.redirect('/');
-	} else {
-		res.render('login', {failedLogin: true});
-	}
-});
+// app.post('/login', function(req, res){
+// 	console.log('body params:', req.body);
+//
+// 	var username = req.body['username'];
+// 	var password = req.body['password'];
+//
+// 	if ( passwordIsValid(username, password) ) {
+// 		req.session.username = username;
+// 		res.redirect('/');
+// 	} else {
+// 		res.render('login', {failedLogin: true});
+// 	}
+// });
 
 //Step 1:
 //Search Database By ShortVIN, if found, serve page "registerStep2" with Username entry
-app.post('/register', function(req, res){
+app.post('/register', userMiddleware.requireUser, function(req, res){
 	var enteredVIN = req.body.shortVIN; //Grab shortVIN from the form and put it in this var
 	console.log('enteredVIN', enteredVIN);
 	//find car by shortVIN
@@ -183,7 +193,7 @@ app.post('/register', function(req, res){
 //Step 2:
 //Add Username to matching Database Object
 //Want to add , userMiddleware.requireUser ...
-app.post('/registerStep2', function(req, res){
+app.post('/registerStep2', userMiddleware.requireUser, function(req, res){
 	var username = req.body.username;
 	var foundVIN = req.body.foundVIN;
 	var collection = mongoDb.collection('coupeData');
@@ -203,7 +213,7 @@ app.post('/registerStep2', function(req, res){
 });
 
 //Display Table of Data
-app.get('/registry', function(req, res){
+app.get('/registry', userMiddleware.requireUser, function(req, res){
 	console.log("Checking logging...");
 	var collection = mongoDb.collection('coupeData');
 	collection.find( {},
@@ -221,6 +231,118 @@ app.get('/registry', function(req, res){
 	});
 });
 
+app.get('/signup', function(req,res){
+  res.render('signup');
+});
+
+function createSalt(){
+  var crypto = require('crypto');
+  return crypto.randomBytes(32).toString('hex');
+}
+
+function createHash(string){
+  var crypto = require('crypto');
+  return crypto.createHash('sha256').update(string).digest('hex');
+}
+
+// This creates a new user and calls the callback with
+// two arguments: err, if there was an error, and the created user
+// if a new user was created.
+//
+// Possible errors: the passwords are not the same, and a user
+// with that username already exists.
+function createUser(username, password, password_confirmation, callback){
+  var coll = mongoDb.collection('users');
+
+  if (password !== password_confirmation) {
+    var err = 'The passwords do not match';
+    callback(err);
+  } else {
+    var query      = {username:username};
+    var salt       = createSalt();
+    var hashedPassword = createHash(password + salt);
+    var userObject = {
+      username: username,
+      salt: salt,
+      hashedPassword: hashedPassword
+    };
+
+    // make sure this username does not exist already
+    coll.findOne(query, function(err, user){
+      if (user) {
+        err = 'The username you entered already exists';
+        callback(err);
+      } else {
+        // create the new user
+        coll.insert(userObject, function(err,user){
+          callback(err,user);
+        });
+      }
+    });
+  }
+}
+
+app.post('/signup', function(req, res){
+  // The 3 variables below all come from the form
+  // in views/signup.hbs
+  var username = req.body.username;
+  var password = req.body.password;
+  var password_confirmation = req.body.password_confirmation;
+
+  createUser(username, password, password_confirmation, function(err, user){
+    if (err) {
+      res.render('signup', {error: err});
+    } else {
+
+      // This way subsequent requests will know the user is logged in.
+      req.session.username = user.username;
+
+      res.redirect('/');
+    }
+  });
+});
+
+// This finds a user matching the username and password that
+// were given.
+function authenticateUser(username, password, callback){
+  var coll = mongoDb.collection('users');
+
+  coll.findOne({username: username}, function(err, user){
+    if (err) {
+      return callback(err, null);
+    }
+    if (!user) {
+      return callback(null, null);
+    }
+    var salt = user.salt;
+    var hash = createHash(password + salt);
+    if (hash === user.hashedPassword) {
+      return callback(null, user);
+    } else {
+      return callback(null, null);
+    }
+  });
+}
+
+app.post('/login', function(req, res){
+  // These two variables come from the form on
+  // the views/login.hbs page
+  var username = req.body.username;
+  var password = req.body.password;
+
+  authenticateUser(username, password, function(err, user){
+    if (user) {
+      // This way subsequent requests will know the user is logged in.
+      req.session.username = user.username;
+
+      res.redirect('/');
+    } else {
+      res.render('login', {badCredentials: true});
+    }
+  });
+});
+
+app.use('/public', express.static('public'));
 
 //Connect to mongoDB
 mongoDb.connect(mongoUrl, function(){
