@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 var MongoStore = require('connect-mongo')(expressSession);
 //mongoDB Database URL
-var mongoUrl = "mongodb://test:test@ds045557.mongolab.com:45557/135is";
+var mongoUrl = "mongodb://neilyadig:UmcKVn8dSODT9ixV@ds045557.mongolab.com:45557/135is";
 //Local Mongo Server JS
 var mongoDb = require('./mongo');
 var userMiddleware = require('./middleware/user');
@@ -164,7 +164,7 @@ app.post('/register', function(req, res){
 	//if not found, rerender form with "nothing was found" error
 	//want a shortVIN matching supplied input
 
-	var collection = mongoDb.collection('importTest'); //Connect to Collection
+	var collection = mongoDb.collection('coupeData'); //Connect to Collection
 
 	collection.findOne( {shortVIN: enteredVIN}, function(err, obj){  //MongoDB method that searches for 1 object in database {key: enteredValue}
 	if (err){
@@ -186,7 +186,7 @@ app.post('/register', function(req, res){
 app.post('/registerStep2', function(req, res){
 	var username = req.body.username;
 	var foundVIN = req.body.foundVIN;
-	var collection = mongoDb.collection('importTest');
+	var collection = mongoDb.collection('coupeData');
 
 	collection.update(
 
@@ -205,7 +205,7 @@ app.post('/registerStep2', function(req, res){
 //Display Table of Data
 app.get('/registry', function(req, res){
 	console.log("Checking logging...");
-	var collection = mongoDb.collection('importTest');
+	var collection = mongoDb.collection('coupeData');
 	collection.find( {},
 		{
 		sort:[ ["buildNo", 1] ]
