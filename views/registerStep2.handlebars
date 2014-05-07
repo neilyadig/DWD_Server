@@ -1,11 +1,18 @@
-Show entered VIN
+<div class = "header">
+  <h1> We found your car in the database! </h1>
+</div>
 
+<div class = "content">
 
 <form action="/registerStep2" method="POST">
-Your VIN: {{foundVIN}}
-Your Build No.: {{foundBuildNo}}
-Enter your username:
+<p>
+Your VIN: {{foundVIN}}<br>
+Build No. {{foundBuildNo}}<br>
+Enter your username:<br>
+<p>
 <input type="text" name="username">
 <input type="hidden" name="foundVIN" value="{{foundVIN}}">
 <button type="submit">Claim Your Car!</button>
 </form>
+
+</div>

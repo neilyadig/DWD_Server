@@ -1,14 +1,18 @@
-<table class="table table-striped">
+<div class = "content">
 
+<table class="pure-table pure-table-horizontal">
+  <thead>
 <tr>
 <!--   <th>VIN:</th> -->
-  <th>Build Number (#/586):</th>
+  <th>Build (#/586):</th>
   <th>Date:</th>
   <th>Exterior:</th>
   <th>Interior:</th>
   <th>Transmission:</th>
 </tr>
+</thead>
 
+<tbody>
 {{#each objects}}
   <tr>
 <!--     <td>{{this.shortVIN}}</td> -->
@@ -19,5 +23,6 @@
     <td>{{this.trans}}</td>
   </tr>
 {{/each}}
-
+</tbody>
 </table>
+</div>

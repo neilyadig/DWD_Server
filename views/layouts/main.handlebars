@@ -3,21 +3,32 @@
 	<head>
 		<title>BMW 135is Registry</title>
 
-		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/public/css/app.css">
+<!-- 		<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/public/css/app.css"> -->
 		<link rel="stylesheet" type="text/css" href="/public/css/nv.d3.css">
 
 		<script src='/public/js/jquery.js'></script>
 		<script src='/public/js/bootstrap.js'></script>
 		<script src='/public/js/d3.js'></script>
 		<script src='/public/js/nv.d3.js'></script>
-
+		<script src="/public/js/ui.js"></script>
 		<script src='/public/js/charts.js'></script>
-<!-- Include Table JS		 -->
+
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="/combo/1.11.5?/css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="/public/css/side-menu.css">
+    <!--<![endif]-->
+		<!--[if lt IE 9]>
+		    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+		<![endif]-->
+
 
 	</head>
 	<body>
-		<nav class="navbar navbar-default" role="navigation">
+<!-- 		<nav class="navbar navbar-default" role="navigation">
 
 			<div class="container">
 
@@ -31,30 +42,51 @@
 
 				<div class="collapse navbar-collapse">
 
-          <ul class="nav navbar-nav">
-              <li><a href="/registry">Registry</a></li>
+          <ul class="nav navbar-nav"> -->
+
+		<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="/">135is Registry</a>
+
+            <ul>
+                <li><a href="/registry">Registry</a></li>
+                <li><a href="/stats">Stats</a></li>
+								<li><a href="/about">About</a></li>
+								{{#if user}}
+									Logged in as: <b>{{user.username}}</b>.
+									<a href='/logout'>Logout</a>
+									{{else}}
+									<a href='/login'>Login</a>
+									<a href='/signup'>Sign up</a>
+									{{/if}}
+
+            </ul>
+        </div>
+    </div>
+
 <!--               <li><a href="/set_session">Set Session (?myValue=X)</a></li> -->
 <!--               <li><a href="/users/5">users/:user_id</a></li> -->
-              <li><a href="/stats">Stats</a></li>
-              <li><a href="/about">About</a></li>
+
+
           </ul>
 
-          <div class='nav navbar-text navbar-right'>
+<!--           <div class='nav navbar-text navbar-right'>
 
-						            {{#if user}}
-						Logged in as: <b>{{user.username}}</b>.
-						<a href='/logout'>Logout</a>
-						{{else}}
-						<a href='/login'>Login</a> | <a href='/signup'>Sign up</a>
-						{{/if}}
-						</div>
+
 
           </div>
         </div>
 			</div>
-		</nav>
+		</nav> -->
 
-	   	<div class='container'>
+	   	<div class='main'>
        		{{{ body }}}
        	</div>
 	</body>
