@@ -15,6 +15,7 @@ $(document).ready(function(){
     d3.select('#colorChart svg')
     .datum(colorData())
     .call(chart);
+    //.attr('width', width).attr('height', height);
 
     nv.utils.windowResize(chart.update);
 
@@ -36,6 +37,8 @@ $(document).ready(function(){
     .datum(intColorData())
     .call(chart);
 
+
+
     nv.utils.windowResize(chart.update);
 
     return chart;
@@ -52,41 +55,30 @@ $(document).ready(function(){
     chart.yAxis.tickFormat(d3.format(',f'));
     chart.valueFormat(d3.format('d'));
 
-
     d3.select('#intExtComboChart svg')
     .datum(intExtComboData())
     .call(chart);
-
-    // var margin = {top: 30, right: 40, bottom: 50, left: 50},
-    //
-    // svg.append("g")
-    //  .attr("class", "x axis")
-    //  .attr("transform", "translate(0," + height + ")")
-    //  .call(xAxis)
-    //    .selectAll("text")
-    //    .style("text-anchor", "end")
-    //    .attr("dx", "-.8em")
-    //    .attr("dy", ".15em")
-    //    .attr("transform", function(d) {
-    //        return "rotate(-65)"
-    //   //  });
+    // .attr('width', width).attr('height', height);
 
     nv.utils.windowResize(chart.update);
 
     return chart;
   });
-  //Regular pie chart example
+
+  // //Regular pie chart example
   nv.addGraph(function() {
     var chart = nv.models.pieChart()
-    .x(function(d) { return d.label })
-    .y(function(d) { return d.value })
+    .x(function(d) { return d.label; })
+    .y(function(d) { return d.value; })
     .showLabels(true);
     chart.valueFormat(d3.format('d'));
 
     d3.select("#transChart svg")
     .datum(transData())
-    .transition().duration(350)
-    .call(chart);
+    .call(chart)
+    .attr('width', width).attr('height', height);
+    // .attr('width', width).attr('height', height);
+
 
     return chart;
   });
@@ -217,19 +209,6 @@ $(document).ready(function(){
         "label":"Alpine White - Taupe",
         "value":2
       },
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       {
         "label":"Deep Sea Blue - Black",

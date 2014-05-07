@@ -1,0 +1,19 @@
+#colorChart svg {
+  width: 600px;
+  height: 400px;
+}
+
+#transChart svg {
+  width: 600px;
+  height: 400px;
+}
+
+#intColorChart svg {
+  width: 600px;
+  height: 400px;
+}
+
+#intExtComboChart svg {
+  width: 1000px;
+  height: 400px;
+}
